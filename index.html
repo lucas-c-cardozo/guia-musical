@@ -3,225 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Funções JS</title>
-    <style>
-        body {
-            font-family: 'Trebuchet MS', sans-serif;
-            background-color: #f0f0f0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .main-title {
-            text-align: center;
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .card {
-            background-color: #fff;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .card-title {
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 15px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-        }
-        .input-group {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        .input-field {
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .input-group .input-field {
-             flex: 1;
-        }
-        .btn {
-            width: 100%;
-            padding: 10px;
-            background-color: #3498db;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        .btn:hover {
-            background-color: #2980b9;
-        }
-        .result-box {
-            margin-top: 15px;
-            padding: 10px;
-            background-color: #ecf0f1;
-            border-radius: 4px;
-            min-height: 40px;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 <body>
-
-    <div class="container">
-        <h1 class="main-title">Funções JavaScript</h1>
-
-        <main class="grid">
-            
-            <section class="card">
-                <h2 class="card-title">1. Maior e Menor</h2>
-                <form id="formMaiorMenor">
-                    <div class="input-group">
-                        <input type="number" id="n1_mm" placeholder="N1" class="input-field" required>
-                        <input type="number" id="n2_mm" placeholder="N2" class="input-field" required>
-                        <input type="number" id="n3_mm" placeholder="N3" class="input-field" required>
-                        <input type="number" id="n4_mm" placeholder="N4" class="input-field" required>
-                        <input type="number" id="n5_mm" placeholder="N5" class="input-field" required>
-                    </div>
-                    <button type="submit" class="btn">Verificar</button>
-                    <p id="resultadoMaiorMenor" class="result-box"></p>
-                </form>
-            </section>
-
-            <section class="card">
-                <h2 class="card-title">2. É Vogal?</h2>
-                <form id="formVogal">
-                    <input type="text" id="charVogal" placeholder="Letra" maxlength="1" class="input-field" required>
-                    <button type="submit" class="btn">Verificar</button>
-                    <p id="resultadoVogal" class="result-box"></p>
-                </form>
-            </section>
-
-            <section class="card">
-                <h2 class="card-title">3. Pares no Intervalo</h2>
-                <form id="formLimites">
-                    <div class="input-group">
-                        <input type="number" id="limiteInferior" placeholder="Início" class="input-field" required>
-                        <input type="number" id="limiteSuperior" placeholder="Fim" class="input-field" required>
-                    </div>
-                    <button type="submit" class="btn">Imprimir</button>
-                    <p id="resultadoLimites" class="result-box"></p>
-                </form>
-            </section>
-
-            <section class="card">
-                <h2 class="card-title">4. Ordenar Valores</h2>
-                <form id="formOrdem">
-                    <div class="input-group">
-                        <input type="number" id="n1_ordem" placeholder="N1" class="input-field" required>
-                        <input type="number" id="n2_ordem" placeholder="N2" class="input-field" required>
-                        <input type="number" id="n3_ordem" placeholder="N3" class="input-field" required>
-                    </div>
-                    <button type="submit" class="btn">Ordenar</button>
-                    <p id="resultadoOrdem" class="result-box"></p>
-                </form>
-            </section>
-
-            <section class="card">
-                <h2 class="card-title">5. Positivo/Negativo</h2>
-                <form id="formPositivoNegativo">
-                    <input type="number" id="numPosNeg" placeholder="Número" class="input-field" required>
-                    <button type="submit" class="btn">Verificar</button>
-                    <p id="resultadoPositivoNegativo" class="result-box"></p>
-                </form>
-            </section>
-
-            <section class="card">
-                <h2 class="card-title">6. Par/Ímpar</h2>
-                <form id="formParImpar">
-                    <input type="number" id="numParImpar" placeholder="Número" class="input-field" required>
-                    <button type="submit" class="btn">Verificar</button>
-                    <p id="resultadoParImpar" class="result-box"></p>
-                </form>
-            </section>
-            
-        </main>
+    <div class="container-principal">  
+        <h1>Sound of Music</h1>
+        <p>Seu guia musical</p>
     </div>
+    <div class="container_2">
+        <h1>Os melhores álbuns da década de 90 segundo a crítica especializada.</h1>
+        <p>Escolha um estilo musical e te daremos um álbum imperdível.</p>
+    </div>
+    <div class="recomendaçao">
+            <h4>Escolha um gênero musical e receba uma recomendação!</h4>
+            <div class="opcoes">
+                <select id="selecione">
+                    <option value="">Escolha seu gênero...</option>
+                    <option value="rock">Rock</option>
+                    <option value="r&b-hiphop">R&B/Hip-hop</option>
+                    <option value="alternativo">Alternativo</option>
+                </select>
+                <button id="recomendar">Gerar recomendação</button>
+            </div>
+            <div id="resultado"></div>
+        </div>
+        <div class="formulario">
+        <h2>Dúvidas ou sugestões? Entre em contato!</h2>
+        <form id="contact-form" novalidate>
+            <div class="form">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <small class="error-message"></small>
+            </div>
+            <div class="form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <small class="error-message"></small>
+            </div>
+            <div class="form">
+                <label for="mensagem">Sua Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                <small class="error-message"></small>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        </div>
+    <div class="itens">
+        <div class="item" data-genre="rock">
+            <input type="checkbox" id="item1" class="item-input">
+            <label for="item1" class="item-label">Rock</label>
+            <div class="item-content">
+                <h2><strong>1.</strong></h2>
+                <img src="https://media.pitchfork.com/photos/63337cac1390abe483e95476/master/w_1600,c_limit/My%20Bloody%20Valentine-Loveless.jpg">
+                <h3>Loveless - My Bloody Valentine (1991)</h3>
+                <blockquote><i>Em sua essência, Loveless é terrivelmente incerto. É o exemplo máximo de um álbum de estúdio autoral – montado de forma glacial quase que inteiramente por Shields, entrando e saindo de estúdios britânicos ao longo de mais de dois anos – ainda assim, o líder da banda e produtor enterra seus vocais e os de Bilinda Butcher, quase inarticulados, no meio da mixagem para recriar o som de assistir ao My Bloody Valentine em um clube barulhento. Toda afinação em Loveless é imperfeita – elas deslizam para dentro e para fora do tom usando a alavanca de vibrato de Shields, ou estão em guerra consigo mesmas, com 10 a 15 faixas de vocal ou guitarra enterradas sob a linha principal, criando anomalias microtonais imperceptíveis. E mesmo que Loveless tenha se tornado uma espécie de totem para audiófilos, o próprio Shields disse que soava bem ao ouvi-lo pelo alto-falante do seu celular. Toda vez que você coloca Loveless para tocar, a música muda, a emoção se transforma, a cerimônia nunca é a mesma. É daí que vem seu poder: sua capacidade reptiliana de sobreviver e evoluir, de representar a crença de que os melhores álbuns não são apenas algo que você ouve, mas algo do qual você se torna parte. –Jeremy D. Larson</i> </blockquote>
+                <br> <h2><strong>2.</strong></h2>
+                <img src="https://media.pitchfork.com/photos/632dcfdcef6685f1f1f35aa0/master/w_1600,c_limit/Radiohead-Let-Down.jpeg">
+                <h3>OK Computer - Radiohead (1997)</h3>
+                <blockquote><i>A banda imortalizou as proclamações febris de Thom Yorke em uma música tão valorosamente grandiosa e emocionalmente envolvente que deixava pouco espaço para reflexão. A guitarra elétrica já havia perdido quase todo o seu brilho anti-autoritário, mas lá estava Jonny Greenwood, combinando um trabalho de guitarra ao estilo Pixies e a magia dos pedais para refazer o instrumento como o som do colapso do sistema. Ritmos cambaleantes e elementos eletrônicos nos lançaram em um reino em pane, onde a beleza do velho mundo se fragmentava em meio a batidas quebradas e tremores de trip-hop. Yorke bradava farpas cuspidas sobre fama, sordidez e mentiras corporativas como um revolucionário derrotado, adotando um tom paranoico para nomear conspirações que todos sabem ser verdadeiras: o consumismo corrompe, o capitalismo aliena, a tecnologia isola, etc. Essa visão de mundo terrível e deprimentemente real poderia ter acendido um fogo em nosso íntimo. Em vez disso, muitos dos discípulos de Yorke foram confortados, aliviados por se sentirem vistos em nossos pequenos quartos e carros infernais. O rock não inspirava mais fé em seu poder revolucionário, mas OK Computer fez a segunda melhor coisa – nos fez acreditar no espetáculo. – Jazz Monroe</i></blockquote>
+                <br> <h2><strong>3.</strong></h2>
+                <img src="https://media.pitchfork.com/photos/633378c2800c1a0f8721bb38/master/w_1600,c_limit/Hole%20Live%20-%20Through%20This.jpg">
+                <h3>Live Through This - Hole (1994)</h3>
+                <blockquote><i>Em 1994, Courtney Love tinha motivos de sobra para estar furiosa: o abuso implacável por parte da mídia e dos fãs misóginos do grunge; a breve apreensão de sua filha bebê pelo Serviço de Proteção à Criança; o declínio pessoal agravante de seu marido Kurt Cobain, que terminou com seu suicídio poucos dias antes do lançamento de Live Through This, o segundo álbum do Hole. Ela canalizou tudo isso em uma obra-prima de beleza raivosa – 12 faixas transbordando com ganchos viciantes como maçãs carameladas envenenadas e alguns dos gritos deliciosamente melódicos mais bem gravados da história. Vociferando contra amantes abusivos (“Violet”), a culpabilização da vítima (“Asking for It”), padrões de beleza impossíveis (“Miss World”), a maternidade (“Plump”) e mais, Love tornou-se um ícone para os desajustados, os sobreviventes e os que estavam de saco cheio. Live Through This rompeu a represa, inundando o rock’n’roll com uma linhagem de fúria que fluiu do riot grrrl para Alanis Morrissette, Paramore, Olivia Rodrigo e além. “Tente só me segurar / Vamos, tente me calar”, Love rosnou em “Gutless”. Três décadas depois, ninguém conseguiu fazer nem uma coisa nem outra. – Amy Phillips</i></blockquote>
+                <br> <h2><strong>4.</strong></h2>
+                <img src="https://media.pitchfork.com/photos/633377d4e02a17d9175e5629/master/w_1600,c_limit/Nirvana%20-%20Nevermind.jpg">
+                <h3>Nevermind - Nirvana (1991)</h3>
+                <blockquote><i>Embora o rock alternativo certamente não fosse segredo ao longo dos anos 80, a desconfortável ascensão meteórica do Nirvana ao topo com Nevermind, de 1991, marcou o momento de supernova do gênero. Lançado pela introdução de guitarra crua e nervosa e pela bateria explosiva de “Smells Like Teen Spirit”, o tédio, a angústia e a incrível composição do álbum fizeram parecer, de repente, que párias talentosos poderiam dominar o mundo. Muitos tentariam engarrafar a essência amarga do Nirvana nos anos seguintes, mas poucas outras bandas trabalhavam com a mesma qualidade de componentes brutos: as linhas de baixo hipnóticas de Krist Novoselic, o ritmo furioso de Dave Grohl e a capacidade de Kurt Cobain de criar refrãos hinos a partir do raspar rústico de uma única palavra. Variando entre andamentos com uma mistura alquímica de pungência e apelo contagiante, Nevermind explorou a dualidade da aceitação e da rejeição, mas nunca fez disso uma lição. A distorcida “In Bloom” e a tranquila “Come As You Are” conseguiram ser lados opostos da mesma moeda, com Cobain analisando as pessoas que gostavam de todas as suas canções bonitas, mas não as compreendiam totalmente, antes de abrir os braços para os desajustados de todos os lugares. Chame isso de uma troca de guarda geracional, se quiser, mas essas 12 músicas se conectaram com jovens ouvintes ao redor do mundo – alguns que apenas achavam que elas eram demais, e muitos mais que reconheceram o ponto de vista cauteloso de Cobain pelo que era: a verdade. – Jessica Letkemann</i></blockquote>
 
-    <script>
-        function MAIOR_MENOR(a, b, c, d, e) {
-            const numeros = [a, b, c, d, e];
-            const maior = Math.max(...numeros);
-            const menor = Math.min(...numeros);
-            return `Maior: ${maior} | Menor: ${menor}`;
-        }
+            </div>
+        </div>
+        <div class="item" data-genre="r&b-hiphop">
+            <input type="checkbox" id="item2" class="item-input">
+            <label for="item2" class="item-label">R&B/Hip-hop</label>
+            <div class="item-content">
+            <h2><strong>1.</strong></h2>
+            <img src="https://media.pitchfork.com/photos/63337bee25ed8dd61c96535f/master/w_1600,c_limit/Lauryn%20Hill%20-%20The%20Miseducation%20Of%20Lauryn%20Hill.jpeg">
+            <h3>The Miseducation of Lauryn Hill - Lauryn Hill (1998)</h3>
+            <blockquote><i>Os anos 90 não foram exatamente uma era de vulnerabilidade harmonizada no rap, mas Hill era tão absurdamente proficiente no canto e como MC – falando sobre tudo, de Moisés a signos astrológicos – que ela criou uma nova linguagem de amor para um mundo que viria a ter seus Drakes. Com Miseducation, sua busca por desejo e espiritualidade ressoou porque foi construída sobre uma base de honestidade: canções sobre obrigações para com a arte, os homens e a maternidade, embaladas em um álbum conceitual com interlúdios que tratam o amor como algo necessário e amorfo. É a forma como ela encobre a mágoa com punhais na faixa de provocação “Lost Ones”, e depois canta com dolorosa clareza sobre o fim de um relacionamento em “Ex-Factor”, uma análise póstuma lindamente lúcida. Ao longo do álbum, Hill faz o trabalho árduo de encarar seus sentimentos e, no processo, ajuda seus ouvintes a lidarem com os seus próprios. – Clover Hope</i></blockquote>
+            <br> <h2><strong>2.</strong></h2>
+            <img src="https://media.pitchfork.com/photos/63337a541390abe483e95472/master/w_1600,c_limit/Wu-Tang%20Clan%20-%20Enter%20The%20Wu-Tang%20(36%20Chambers).jpeg">
+            <h3>Enter The Wu-Tang(36 Chambers) (1993)</h3>
+            <blockquote><i>Essa urgência permeia cada dístico testado em batalha, desde as rajadas sufocantes de seu primeiro single marcante, “Protect Ya Neck”, que conta com quase todos os membros originais do grupo, aos lamentos nostálgicos de Ghostface e Raekwon em “Can It Be All So Simple”, até a introspecção existencial de Method Man e Inspectah Deck em “C.R.E.A.M.”. Enquanto isso, “Wu-Tang Clan Ain’t Nuthing Ta F’ Wit” é poeticamente autorreferencial em um nível totalmente diferente: uma declaração desafiadora de consumados azarões do rap, rimando sobre o tema sampleado do desenho animado dos anos 60, Underdog (Vira-Lata). Em seu lançamento, Enter the Wu-Tang (36 Chambers) já soava lendário. Agora, ouvido como a trilha sonora de uma história de origem da qual conhecemos o desfecho, seu legado histórico se iguala ao seu brilhantismo puro. – Jeff Mao</i></blockquote>
+            <br> <h2><strong>3.</strong></h2>
+            <img src="https://media.pitchfork.com/photos/6333794810c581ffac68d21b/master/w_1600,c_limit/Janet%20Jackson%20-%20The%20Velvet%20Rope.jpg">
+            <h3>The Velvet Rope - Janet Jackson (1997)</h3>
+            <blockquote><i>Uma meta-meditação sobre sua consciência, The Velvet Rope de 1997 mergulha nas profundezas da mente de Jackson, do amor em retrospecto (“Got ’Til It’s Gone”) ao amor no futuro metafísico (“Together Again”). Aqui, a corda representa não apenas uma barreira renunciada à intimidade, mas também uma facilitadora para jogos de bondage, e o mundo interior construído por Jackson e seus fiéis colaboradores (Jimmy Jam, Terry Lewis e o então marido René Elizondo Jr.) é plenamente realizado. Temas líricos e musicais se repetem e dialogam entre si ao longo do álbum; o característico ruído da caixa do proto-footwork de “Empty”, por exemplo, reverbera com um efeito muito diferente na deslumbrante faixa quiet storm do álbum, “Anything”. A coesão resultante é mais forte do que em qualquer outro álbum de Jackson, particularmente durante a segunda metade de Rope, uma suíte de slow jams que explora facetas de uma estética totalmente chill. O fato de Jackson lançar um disco tão suave e musicalmente ousado após assinar o que era então o maior contrato de gravação de todos os tempos (uma renovação de US$ 80 milhões com a Virgin) é um movimento tipicamente Janet: introvertido em sua extroversão, o mais silencioso dos rugidos. – Rich Juzwiak</i></blockquote>
 
-        function VOGAL(c) {
-            if (typeof c !== 'string' || c.length !== 1) return 0;
-            const vogais = 'aeiouáéíóúâêîôûàèìòùäëïöü';
-            return vogais.includes(c.toLowerCase()) ? 1 : 0;
-        }
-
-        function LIMITES(li, ls) {
-            let pares = [];
-            let somatorio = 0;
-            for (let i = li + 1; i < ls; i++) {
-                if (i % 2 === 0) {
-                    pares.push(i);
-                    somatorio += i;
-                }
-            }
-            return `Pares: ${pares.join(', ') || 'Nenhum'}<br>Soma: ${somatorio}`;
-        }
-
-        function ORDEM(a, b, c) {
-            const numeros = [a, b, c];
-            numeros.sort((x, y) => x - y);
-            return `Ordem: ${numeros.join(', ')}`;
-        }
-
-        function POSITIVO_NEGATIVO(x) {
-            return x >= 0;
-        }
-        
-        function PAR_IMPAR(x) {
-            return x % 2 === 0;
-        }
-
-        function handleFormSubmit(formId, resultId, func, ...inputIds) {
-            document.getElementById(formId).addEventListener('submit', function(event) {
-                event.preventDefault();
-                
-                const values = inputIds.map(id => {
-                    const input = document.getElementById(id);
-                    return input.type === 'number' ? parseInt(input.value, 10) : input.value;
-                });
-                
-                const resultado = func(...values);
-                document.getElementById(resultId).innerHTML = resultado;
-            });
-        }
-
-        handleFormSubmit('formMaiorMenor', 'resultadoMaiorMenor', MAIOR_MENOR, 'n1_mm', 'n2_mm', 'n3_mm', 'n4_mm', 'n5_mm');
-        handleFormSubmit('formVogal', 'resultadoVogal', (char) => {
-            const res = VOGAL(char);
-            return `Resultado: ${res} (${res === 1 ? 'É vogal' : 'Não é vogal'})`;
-        }, 'charVogal');
-        handleFormSubmit('formLimites', 'resultadoLimites', LIMITES, 'limiteInferior', 'limiteSuperior');
-        handleFormSubmit('formOrdem', 'resultadoOrdem', ORDEM, 'n1_ordem', 'n2_ordem', 'n3_ordem');
-        handleFormSubmit('formPositivoNegativo', 'resultadoPositivoNegativo', (val) => {
-            const res = POSITIVO_NEGATIVO(val);
-            return `É Positivo/Zero? <strong>${res}</strong>`;
-        }, 'numPosNeg');
-        handleFormSubmit('formParImpar', 'resultadoParImpar', (val) => {
-            const res = PAR_IMPAR(val);
-            return `É Par? <strong>${res}</strong>`;
-        }, 'numParImpar');
-
-    </script>
+        </div>
+        <div class="item" data-genre="alternativo" >
+            <input type="checkbox" id="item3" class="item-input">
+            <label for="item3" class="item-label">Alternativo</label>
+            <div class="item-content">
+            <h2><strong>1.</strong></h2>
+            <img src="https://media.pitchfork.com/photos/633379b0f2e57bfbb70500a2/master/w_1600,c_limit/Bjo%CC%88rk%20-%20Homogenic.jpg">
+            <h3>Homogenic - Björk (1997)</h3>
+            <blockquote><i>Björk mergulhou na cena clubber de Londres em seus dois primeiros álbuns solo, mas no período que antecedeu Homogenic, de 1997, uma série de circunstâncias pessoais lhe deu motivos de sobra para retornar à sua Islândia natal. Com elementos eletrônicos voláteis que Björk comparou aos vulcões ativos da nação insular, e cordas desoladoras que poderiam concebivelmente ser a trilha sonora de um filme épico viking, o álbum certamente representou um tipo de retorno ao lar. Seu título também falava do crescente controle de Björk sobre o processo criativo, o qual ela usou, com colaboradores como Markus Dravs e Mark Bell, para alcançar sua paleta sonora mais unificada até então. Essa ambientação majestosa, porém instável – Arvo Pärt encontra Aphex Twin – adorna algumas das declarações mais arrebatadoras da letrista frequentemente enigmática. Ela é uma fonte de sangue na forma de uma garota; um estado de emergência é onde ela quer estar; ela sabe que você não consegue lidar com o amor. Quando ela descarrega essas epifanias da sua maneira usual que desafia a gravidade, tanto artista de trapézio quanto vocalista, a sensação de aventura é palpável. No final, grande parte do álbum foi gravada na Espanha – você realmente nunca pode voltar completamente para casa – e o retorno de Björk a uma vida mais tranquila acabou sendo uma jornada de descoberta ainda maior. Quando o álbum se encerra com o êxtase límpido de “All Is Full of Love”, fica claro que, ao voltar para suas origens, Björk encontrou uma nova maneira de seguir em frente. – Marc Hogan</i></blockquote>
+            <br> <h2><strong>2.</strong></h2>
+            <img src="https://media.pitchfork.com/photos/63337754800c1a0f8721bb36/master/w_1600,c_limit/Portishead%20-%20Dummy.jpg">
+            <h3>Dummy - Portishead (1994)</h3>
+            <blockquote><i>Apesar de sua reputação como um dos pilares do trip-hop, o álbum de estreia do trio de Bristol Portishead, de 1994, é muito mais sombrio – e estranho – do que o senso comum poderia levar você a acreditar. Para começar, o gênero ainda não havia se solidificado, e Geoff Barrow, um garimpeiro de discos de 22 anos, não estava muito interessado em música ambiente de qualquer forma. Sampleando soul vintage e canalizando o espírito de antigos filmes de espionagem, ele e o guitarrista Adrian Utley, de 37 anos, esboçaram uma linhagem esquelética de boom-bap onde zumbidos de tom de discagem e breakbeats caseiros nadavam em um oceano de silêncio. Foi a cantora Beth Gibbons, de 29 anos, quem teve a tarefa de preencher esse vazio, mas apesar do calor de seu canto sussurrado influenciado por Billie Holiday, seu vocal é uniformemente desolador, sua presença tão perturbadora quanto íntima. Nos 28 anos desde então, poucas trilhas sonoras para encontros amorosos em quartos de dormitório inspiraram uma sensação maior de pavor. – Philip Sherburne</i></blockquote>
+            <br> <h2><strong>3.</strong></h2>
+            <img src="https://media.pitchfork.com/photos/6333732f6984e83cd288d2f5/master/w_1600,c_limit/Cocteau%20Twins%20-%20Heaven%20or%20Las%20Vegas.png">
+            <h3>Heaven or Las Vegas - Cocteau Twins (1990)</h3>
+            <blockquote><i>Em 1990, quando o Cocteau Twins lançou Heaven or Las Vegas – seu último álbum pela 4AD, o selo independente do Reino Unido que havia guiado sua jornada de místicos do pós-punk a tecelões de sonhos do ambient-pop – o trio escocês estava sob imensa pressão. A vocalista Elizabeth Fraser e o guitarrista Robin Guthrie tinham tido sua primeira filha, mas o vício em drogas de Guthrie estava arrastando o casal e o grupo para baixo. O mundo ao redor deles também estava mudando. O casulo protetor do underground dos anos 80 havia se rompido decisivamente; antigos colegas de cena estavam tocando em estádios, e o som obscuro e hermético do qual os Cocteaus haviam sido pioneiros estava sendo suplantado por vertentes mais altas e ensolaradas do rock alternativo. Nada disso é audível em Heaven or Las Vegas, o álbum mais fluido de seu catálogo, transbordando luz e esperança. Há acenos para a nova década em batidas programadas que insinuam ritmos de dance e hip-hop, mas, de resto, eles simplesmente soam como eles mesmos, destilados em sua forma mais potente. As proeminentes linhas de baixo de Simon Raymonde dão à banda um impulso melódico inesperado; as guitarras de Guthrie se espalham como feixes de luz, um milagre de transubstanciação; Fraser mantém toda a sua mística etérea enquanto afia sua voz até que ela corte como um laser através do veludo. Às vezes, uma frase inteligível até queima através da névoa pastel, como em “Iceblink Luck”: “Queime este hospício inteiro”. Raramente um fogo é tão purificador. – Philip Sherburne</i></blockquote>
+        </div>
+    </div>
+        <script src="script.js"></script>
 </body>
 </html>
