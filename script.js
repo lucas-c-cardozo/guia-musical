@@ -81,7 +81,7 @@ if (contactForm) {
         }
 
         if (isFormValid) {
-            alert('Formulário enviado com sucesso! (Simulação)');
+            alert('Mensagem enviada com sucesso.');
             contactForm.reset();
             clearErrors();
         }
