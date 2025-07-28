@@ -30,9 +30,9 @@ recommenderButton.addEventListener('click', function() {
             `;
             
             resultadoDiv.innerHTML = htmlResultado;
-            const accordionContainer = document.querySelector('.itens');
-            if (accordionContainer) {
-                accordionContainer.style.display = 'block';
+            const Container = document.querySelector('.itens');
+            if (Container) {
+                Container.style.display = 'block';
             }
 
         } else {
